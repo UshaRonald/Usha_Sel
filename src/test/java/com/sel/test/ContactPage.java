@@ -49,24 +49,24 @@ public class ContactPage {
     
     
     @Test
-    public void testContactPage() throws Exception {
-          WebDriverManager.chromedriver().setup();
-          WebDriver driver=new ChromeDriver();
-          driver.manage().window().maximize();
-          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-          driver.get("https://www.advantageonlineshopping.com/");
-          driver.findElement(By.linkText("CONTACT US")).click();
-          driver.findElement(By.name("categoryListboxContactUs")).click();
-          new Select(driver.findElement(By.name("categoryListboxContactUs"))).selectByVisibleText("Laptops");
-          driver.findElement(By.name("productListboxContactUs")).click();
-          new Select(driver.findElement(By.name("productListboxContactUs"))).selectByVisibleText("HP Pavilion 15t Touch Laptop");
-          driver.findElement(By.name("emailContactUs")).click();
-          driver.findElement(By.name("emailContactUs")).clear();
-          driver.findElement(By.name("emailContactUs")).sendKeys("gerausharani1@gmail.com");
-          driver.findElement(By.name("subjectTextareaContactUs")).click();
-          driver.findElement(By.name("subjectTextareaContactUs")).clear();
-          driver.findElement(By.name("subjectTextareaContactUs")).sendKeys("Hi there, do you have this laptop?");
-          driver.findElement(By.id("send_btnundefined")).click();
+     public void testContactPage() throws Exception {
+     WebDriverManager.chromedriver().setup();
+     WebDriver driver=new ChromeDriver();
+    driver.manage().window().maximize();
+    driver.get("https://www.advantageonlineshopping.com/");
+    driver.findElement(By.linkText("CONTACT US")).click();
+    driver.findElement(By.name("categoryListboxContactUs")).click();
+    new Select(driver.findElement(By.name("categoryListboxContactUs"))).selectByVisibleText("Laptops");
+    driver.findElement(By.name("productListboxContactUs")).click();
+    new Select(driver.findElement(By.name("productListboxContactUs"))).selectByVisibleText("HP Pavilion 15t Touch Laptop");
+    driver.findElement(By.name("emailContactUs")).click();
+    driver.findElement(By.name("emailContactUs")).clear();
+    driver.findElement(By.name("emailContactUs")).sendKeys("gerausharani1@gmail.com");
+    driver.findElement(By.name("subjectTextareaContactUs")).click();
+    driver.findElement(By.name("subjectTextareaContactUs")).clear();
+    driver.findElement(By.name("subjectTextareaContactUs")).sendKeys("Hi there, do you have this laptop?");
+    driver.findElement(By.id("send_btnundefined")).click();
+  
+     }
   }
 
-}
