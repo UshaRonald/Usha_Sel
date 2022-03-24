@@ -20,9 +20,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
  *
  * @author gerau
  */
-public class EditRemoveButton {
+public class EditRemoveButtonTest {
     
-    public EditRemoveButton() {
+    public EditRemoveButtonTest() {
     }
     
     @BeforeAll

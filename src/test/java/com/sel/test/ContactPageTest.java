@@ -5,7 +5,6 @@
 package com.sel.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import java.time.Duration;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,9 +19,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
  *
  * @author gerau
  */
-public class ContactUsFailPage {
+public class ContactPageTest {
     
-    public ContactUsFailPage() {
+    public ContactPageTest() {
     }
     
     @BeforeAll
@@ -48,7 +47,10 @@ public class ContactUsFailPage {
     // public void hello() {}
     
     @Test
-    public void testContactPage() throws Exception {
+     public void testContactPage() throws Exception {
+     WebDriverManager.chromedriver().setup();
+     WebDriver driver=new ChromeDriver();
+    driver.manage().window().maximize();
     driver.get("https://www.advantageonlineshopping.com/");
     driver.findElement(By.linkText("CONTACT US")).click();
     driver.findElement(By.name("categoryListboxContactUs")).click();
@@ -62,6 +64,6 @@ public class ContactUsFailPage {
     driver.findElement(By.name("subjectTextareaContactUs")).clear();
     driver.findElement(By.name("subjectTextareaContactUs")).sendKeys("Hi there, do you have this laptop?");
     driver.findElement(By.id("send_btnundefined")).click();
-  }
   
+     }
 }

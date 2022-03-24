@@ -20,9 +20,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
  *
  * @author gerau
  */
-public class LaptopPage {
+public class ColorFontTest {
     
-    public LaptopPage() {
+    public ColorFontTest() {
     }
     
     @BeforeAll
@@ -47,23 +47,24 @@ public class LaptopPage {
     // @Test
     // public void hello() {}
     
-              @Test
-              public void testLaptopPage() throws Exception {
+    @Test
+  public void testColorFont() throws Exception {
               WebDriverManager.chromedriver().setup();
               WebDriver driver=new ChromeDriver();
               driver.manage().window().maximize();
               driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-              driver.get("https://www.advantageonlineshopping.com/");
-              driver.findElement(By.id("laptopsTxt")).click();
-              driver.findElement(By.name("buy_now")).click();
+              driver.get("https://www.advantageonlineshopping.com/#/");
+              driver.findElement(By.id("laptopsImg")).click();
+              driver.findElement(By.id("5")).click();
               driver.findElement(By.xpath("//div[@id='productProperties']/div/div[2]/span[2]")).click();
-              driver.findElement(By.xpath("//div[@id='productProperties']/div/div[2]/span[3]")).click();
+              driver.findElement(By.id("bunny")).click();
+              driver.findElement(By.linkText("LAPTOPS")).click();
+              driver.findElement(By.id("3")).click();
+              driver.findElement(By.xpath("//div[@id='productProperties']/div/div[2]/span[2]")).click();
               driver.findElement(By.xpath("//div[@id='productProperties']/div/div[2]/span[4]")).click();
               driver.findElement(By.xpath("//div[@id='productProperties']/div/div[2]/span[5]")).click();
-              driver.findElement(By.xpath("//div[@id='productProperties']/div/div[2]")).click();
-              driver.findElement(By.xpath("//div[@id='productProperties']/div[2]/e-sec-plus-minus/div/div[3]")).click();
-              driver.findElement(By.xpath("//div[@id='productProperties']/div[2]/e-sec-plus-minus/div/div[3]")).click();
-              driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='MEMORY'])[1]/following::label[1]")).click();
-              driver.findElement(By.name("save_to_cart")).click();
+              driver.findElement(By.xpath("//div[@id='productProperties']/div/div[2]/span[6]")).click();
+              driver.findElement(By.id("bunny")).click();
+              driver.findElement(By.linkText("LAPTOPS")).click();
   }
 }

@@ -20,9 +20,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
  *
  * @author gerau
  */
-public class CheckingFilters {
+public class CheckingFiltersTest {
     
-    public CheckingFilters() {
+    public CheckingFiltersTest() {
     }
     
     @BeforeAll
@@ -83,7 +83,7 @@ public class CheckingFilters {
               driver.findElement(By.id("accordionColor")).click();
               driver.findElement(By.id("productsColors55CDD5")).click();
               driver.findElement(By.id("accordionColor")).click();
+  
   }
 
- 
 }
